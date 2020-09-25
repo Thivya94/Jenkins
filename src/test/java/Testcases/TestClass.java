@@ -48,6 +48,7 @@ public class TestClass extends Baseclass {
 		wait.until(ExpectedConditions.presenceOfElementLocated(ICD.wait_ICDnum())).sendKeys(Excel.ICD_numbers);
 		ExtentManager.test.log(Status.PASS, "[Sent the icd number]");
 
+		Thread.sleep(3000);
 		ExtentManager.test.log(Status.INFO, "[Choose the icd type]");
 		mpDriver_centralClass.getICD().ICD_codeType.click();
 		Select icd_dropdown = new Select(mpDriver_centralClass.getICD().ICD_codeType);
