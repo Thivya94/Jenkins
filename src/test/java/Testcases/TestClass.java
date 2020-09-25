@@ -25,7 +25,7 @@ public class TestClass extends Baseclass {
 	public void loginPageTest(String UserName, String Password) throws Exception {
 
 		
-		mpDriver_centralClass.getExcel().readExcel(1, "ICD");
+		mpDriver_centralClass.getExcel().readExcel(2, "ICD");
 		
 		ExtentManager.test.log(Status.INFO, "[Start the test by logging in]");
 		Login(UserName, Password);
