@@ -25,7 +25,7 @@ public class TestClass extends Baseclass {
 	public void loginPageTest(String UserName, String Password) throws Exception {
 
 		
-		mpDriver_centralClass.getExcel().readExcel(0, "ICD");
+		mpDriver_centralClass.getExcel().readExcel(1, "ICD");
 		
 		ExtentManager.test.log(Status.INFO, "[Start the test by logging in]");
 		Login(UserName, Password);
@@ -59,6 +59,8 @@ public class TestClass extends Baseclass {
 		mpDriver_centralClass.getICD().ICD_codeName.sendKeys(Excel.ICD_name);
 		ExtentManager.test.log(Status.PASS, "[Sent the icd name]");
 
+		Thread.sleep(3000);
+		
 		ExtentManager.test.log(Status.INFO, "[Click the submit button]");
 		mpDriver_centralClass.getICD().ICD_submit.click();
 		ExtentManager.test.log(Status.PASS, "[Submit button clicked]");
