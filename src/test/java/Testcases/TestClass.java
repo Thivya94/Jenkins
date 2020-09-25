@@ -43,6 +43,7 @@ public class TestClass extends Baseclass {
 		mpDriver_centralClass.getICD().Add.click();
 		ExtentManager.test.log(Status.PASS, "[Clicked the ICD Add button]");
 
+		Thread.sleep(3000);
 		ExtentManager.test.log(Status.INFO, "[Send the icd number]");
 		wait.until(ExpectedConditions.presenceOfElementLocated(ICD.wait_ICDnum())).sendKeys(Excel.ICD_numbers);
 		ExtentManager.test.log(Status.PASS, "[Sent the icd number]");
